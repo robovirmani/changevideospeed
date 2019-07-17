@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from www.videospeedup.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Jul 2019 10:51:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+            Change Video Speed | Change video playback speed on Youtube, Netflix, etc.
+        </title>
+        <link rel='stylesheet' href='./assets/bulma.min.css'/>
+        <link rel="icon" href="assets/favicon.ico" />
+        <style>  
+
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+    zoom: 3;
+}
+
+</style>
+    </head>
+    <body style="background-color: grey; color: white;">
+        <!-- Hero (title and subtitle) -->
+        
+            <section class="hero is-dark is-small" style="background-color: steelblue">
+                <div class="hero-body">
+                    <div class="container">
+                        <h1 class="title">
+                          <img src="./assets/play.png">  <br>changevideospeed
+                        </h1>
+                        <h2 class="subtitle">
+                            Adjust video playback speed while streaming online on various platforms beyond permissible limit.
+                            Tested on Youtube, Amazon Prime Video, Netflix, Hotstar.
+                        </h2>
+                    </div>
+                </div>
+            </section>
+        
+
+        <!-- Content Section -->
+        <section class="section">
+            <div class="container">
+                <!-- How-to -->
+                <h1 class="title">  Usage Instructions  </h1>
+                <hr />
+
+                <!-- Instructions and video -->
+                <div class="columns is-multiline is-mobile">
+                    
+                      
+                            <p>
+                                <b>Only works with HTML5 video
+                                players.</b>
+                                <br />
+                                1. Ensure that your browser's bookmarks bar is visible. (Ctrl+Shift+B for chrome)
+                                <br />
+                                2. Enter the desired speed of the speed up in the corresponding input field. 
+                                 <br />
+                                3. Drag the resulting button below the text field and drop it in the bookmarks bar of browser.
+                                <br />
+                                4. Press the button in the bookmarks bar when the video is open to get the desired playback speed.
+                                <br />
+                                5. If you press the button again, the playback speed will be back to original.
+                                
+                            </p>
+                        
+                    	
+                    
+                        
+                    
+                </div>
+                		<br><br>
+                
+                <div style="border: 1px solid white; padding: 25px ">
+                <h1 class="title"> Increase Playback Speed </h1>
+                <hr />
+                <div class="content">
+                    <p>
+                        Enter the desired increased playback speed below (for example, <b>3.25</b>).
+                        Then drag and drop the created link to the bookmark bar to use it.
+                    </p>
+                </div>
+                <div class="columns is-centered is-multiline is-mobile">
+                    <div class="column is-narrow">
+                        <input style="width: 150px" 
+                            id="iu"
+                            class="input"
+                            type="number"
+                            min="1"
+                            step="0.05"
+                            value="3.25"
+                            lang="en-US"
+                        />
+                    </div>
+                </div>
+                <div class="columns is-centered is-multiline is-mobile">
+                    <div class="column is-narrow">
+                        <div class="card">
+                            <a
+                                id="bu"
+                                href="javascript:(function(){document.querySelector('video').playbackRate=1;})();"
+                                class="card-header-title is-centered"
+                            >
+                                ⚡3.25x
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <br><br>
+
+                <div style="border: 1px solid white; padding: 25px ">
+                
+                <h1 class="title"> Decrease Playback Speed </h1>
+                <hr />
+                <div class="content">
+                    <p>
+                        Enter the desired decreased playback speed below (for example, <b>0.35</b>).
+                        Then drag and drop the created link to the bookmark bar to use it.
+                    </p>
+                </div>
+                <div class="columns is-centered is-multiline is-mobile">
+                    <div class="column is-narrow">
+                        <input style="width: 150px;" 
+                            id="id"
+                            class="input"
+                            type="number"
+                            min="0"
+                            max="1"
+                            step="0.05"
+                            value="0.35"
+                            lang="en-US"
+                        />
+                    </div>
+                </div>
+                <div class="columns is-centered is-multiline is-mobile">
+                    <div class="column is-narrow">
+                        <div class="card">
+                            <a
+                                id="bd"
+                                href="javascript:(function(){document.querySelector('video').playbackRate=0;})();"
+                                class="card-header-title is-centered"
+                            >
+                                🐌0.35x
+                            </a>
+                        </div>
+                    </div>
+                
+            
+        </div>
+        </section>
+
+        
+            <p style="float: right; color: black"> Created by: <a href="https://github.com/robovirmani" target="_blank"> Raghav Virmani </a></p>
+        
+
+        <!-- Scripts for custom buttons -->
+        <script type="text/javascript">
+            let lh =
+                "javascript:(function(){let x=document.querySelector('video');x.playbackRate=x.playbackRate!=1?1:";
+            let rh = ";})();";
+            let iu = document.getElementById("iu");
+            let bu = document.getElementById("bu");
+            let id = document.getElementById("id");
+            let bd = document.getElementById("bd");
+            iu.oninput = function() {
+                bu.href = lh + iu.value + rh;
+                bu.innerHTML = "⚡" + iu.value + "x";
+            };
+            id.oninput = function() {
+                bd.href = lh + id.value + rh;
+                bd.innerHTML = "🐌" + id.value + "x";
+            };
+        </script>
+    </body>
+
+<!-- Mirrored from www.videospeedup.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Jul 2019 10:51:19 GMT -->
+</html>
